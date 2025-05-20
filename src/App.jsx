@@ -27,7 +27,7 @@ export function App() {
 
         {mostrarEsconder && <p>Em breve irei sumir</p>}
       </div>
-    </div>
+    </div> // fim do return
   );
 }
 export default App;
