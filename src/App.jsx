@@ -4,33 +4,30 @@ export function App() {
   const [numero, setNumero] = useState(100);
   const [mostrarEsconder, setMostrarEsconder] = useState(false);
 
-  function handleAcresentar(){
-    setNumero(numero + 100)
+  function handleAcrescentar() {
+    setNumero(numero + 100);
   }
 
-  function handleMostrarEsconderParagrafo(){
-    MostrarEsconder ? setMostrarEsconder(false) : setMostrarEsconder(true)
+  function handleMostrarParagrafo() {
+    setMostrarEsconder(true);
   }
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
+    <div>
       <h1>Atividade useState</h1>
-      
 
       <div>
         <h2>Número: {numero}</h2>
-        <button onClick={handleAcresentar}>Acresentar 100</button>
+        <button onClick={handleAcrescentar}>Acrescentar 100</button>
       </div>
+
       <div>
-        <h2>o paragrafo sumidouro</h2>
-        {mostrarEsconder ?  <p>em breve irei sumir</p>: "" }
+        <h2>O parágrafo sumidouro</h2>
+        <button onClick={handleMostrarParagrafo}>Mostrar parágrafo</button>
+
+        {mostrarEsconder && <p>Em breve irei sumir</p>}
       </div>
-      </div>
+    </div>
   );
 }
-
-
-
-
-
 export default App;
