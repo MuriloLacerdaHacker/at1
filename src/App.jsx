@@ -8,8 +8,8 @@ export function App() {
     setNumero(numero + 100);
   }
 
-  function handleMostrarParagrafo() {
-    setMostrarEsconder(true);
+  function handleMostrarOuEsconder() {
+    setMostrarEsconder(!mostrarEsconder); // alterna entre true e false
   }
 
   return (
@@ -23,11 +23,13 @@ export function App() {
 
       <div>
         <h2>O parágrafo sumidouro</h2>
-        <button onClick={handleMostrarParagrafo}>Mostrar parágrafo</button>
+        <button onClick={handleMostrarOuEsconder}>
+          {mostrarEsconder ? "Esconder parágrafo" : "Mostrar parágrafo"}
+        </button>
 
         {mostrarEsconder && <p>Em breve irei sumir</p>}
       </div>
-    </div> // fim do return
+    </div>
   );
 }
 export default App;
